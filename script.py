@@ -59,7 +59,7 @@ def bitlink_exist(token, link):
 
 def main():
     load_dotenv()
-    token = os.getenv('TOKEN', '')
+    token = os.getenv('BITLY_GENERIC_TOKEN', '')
 
     user_input = input('Введите ссылку: ')
 
