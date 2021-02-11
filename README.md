@@ -4,10 +4,14 @@
 
 
 ### Установка необходимых библиотек
-`$ pip install -r requirements.txt`
+```
+$ pip install -r requirements.txt
+```
 
 Токен API Bitly записать в переменную окружения `TOKEN`
 
 
 ### Запуск
-`$ python3 script.py`
+```
+$ python3 script.py
+```
