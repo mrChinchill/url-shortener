@@ -45,7 +45,7 @@ def count_clicks(token, link):
     return response.json()['total_clicks']
 
 
-def bitlink_exist(token, link):
+def is_bitlink_exist(token, link):
     url = '{host}/v4/bitlinks/{bitlink}'.format(
         host=API_URL,
         bitlink=cut_scheme(link)
@@ -64,7 +64,7 @@ def main():
     user_input = input('Введите ссылку: ')
 
     try:
-        if bitlink_exist(token, user_input):
+        if is_bitlink_exist(token, user_input):
             clicks_count = count_clicks(token, user_input)
             print('По вашей ссылке прошли: {} раз(а)'.format(clicks_count))
         else:
