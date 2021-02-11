@@ -54,7 +54,7 @@ def bitlink_exist(token, link):
 
     response = requests.get(url, headers=headers)
 
-    return response.status_code == 200
+    return response.ok
 
 
 def main():
