@@ -13,5 +13,5 @@ $ pip install -r requirements.txt
 
 ### Запуск
 ```
-$ python3 script.py
+$ python3 script.py <url>
 ```

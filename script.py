@@ -2,6 +2,7 @@
 
 import os
 from dotenv import load_dotenv
+import argparse
 from urllib.parse import urlparse
 import requests
 from requests.exceptions import ConnectionError
@@ -57,11 +58,22 @@ def is_bitlink_exist(token, link):
     return response.ok
 
 
+def create_parser():
+    parser = argparse.ArgumentParser(
+        description='Утилита для сокращения ссылок'
+    )
+    parser.add_argument('url', help='Ссылка')
+
+    return parser
+
+
 def main():
     load_dotenv()
     token = os.getenv('BITLY_GENERIC_TOKEN', '')
 
-    user_input = input('Введите ссылку: ')
+    parser = create_parser()
+    args = parser.parse_args()
+    user_input = args.url
 
     try:
         if is_bitlink_exist(token, user_input):
