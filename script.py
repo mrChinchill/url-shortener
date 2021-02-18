@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 
-import os
-from dotenv import load_dotenv
 import argparse
-from urllib.parse import urlparse
+import os
+
 import requests
+
+from dotenv import load_dotenv
 from requests.exceptions import ConnectionError
 from requests.exceptions import HTTPError
-
+from urllib.parse import urlparse
 
 API_URL = 'https://api-ssl.bitly.com'
 
