@@ -8,7 +8,8 @@
 $ pip install -r requirements.txt
 ```
 
-Токен API Bitly записать в переменную окружения `BITLY_GENERIC_TOKEN`
+### Настройка окружения
+[Токен API Bitly](https://bitly.is/accesstoken) записать в переменную окружения `BITLY_GENERIC_TOKEN`
 
 ### Пример `.env` файла:
 ```
